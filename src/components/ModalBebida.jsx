@@ -37,6 +37,13 @@ export default function ModalBebida() {
                         {receta.strInstructions}
                         <h2>Ingredientes y Cantidades</h2>
                         {mostrarIngredientes()}
+                        <Button
+                            variant="link"
+                            onClick={() => handleModalClick()}
+                            className=" d-md-none text-warning"
+                        >
+                            Volver
+                        </Button>
                     </div>
                     {
                         !Object.keys(bebidasFav).includes(receta.idDrink) ? (
