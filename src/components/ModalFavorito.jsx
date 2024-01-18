@@ -9,8 +9,15 @@ export default function ModalFavorito() {
     return (
         <Modal show={modalFav} onHide={handleModalFavClick}>
 
-            <Modal.Header>
+            <Modal.Header className="d-md-block d-md-flex justify-content-between">
                 <Modal.Title>Bebidas Favoritas</Modal.Title>
+                <Button
+                    variant="link"
+                    onClick={() => handleModalClick()}
+                    className=" d-md-none text-warning"
+                >
+                    Volver
+                </Button>
             </Modal.Header>
 
             <Modal.Body className=" justify-content-center flex-column d-flex gap-3">
