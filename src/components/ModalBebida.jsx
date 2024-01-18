@@ -27,8 +27,15 @@ export default function ModalBebida() {
                     alt={`Imagen bebida ${receta.strDrink}`}
                 />
 
-                <Modal.Header>
+                <Modal.Header className="d-md-block d-md-flex justify-content-between">
                     <Modal.Title>{receta.strDrink}</Modal.Title>
+                    <Button
+                        variant="link"
+                        onClick={() => handleModalClick()}
+                        className=" d-md-none text-warning"
+                    >
+                        Volver
+                    </Button>
                 </Modal.Header>
 
                 <Modal.Body>
@@ -37,13 +44,6 @@ export default function ModalBebida() {
                         {receta.strInstructions}
                         <h2>Ingredientes y Cantidades</h2>
                         {mostrarIngredientes()}
-                        <Button
-                            variant="link"
-                            onClick={() => handleModalClick()}
-                            className=" d-md-none text-warning"
-                        >
-                            Volver
-                        </Button>
                     </div>
                     {
                         !Object.keys(bebidasFav).includes(receta.idDrink) ? (

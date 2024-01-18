@@ -13,7 +13,7 @@ export default function ModalFavorito() {
                 <Modal.Title>Bebidas Favoritas</Modal.Title>
                 <Button
                     variant="link"
-                    onClick={() => handleModalClick()}
+                    onClick={() => handleModalFavClick()}
                     className=" d-md-none text-warning"
                 >
                     Volver
